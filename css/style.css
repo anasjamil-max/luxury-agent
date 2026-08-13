@@ -39,7 +39,8 @@
 
   /* Fonts */
   --font-heading: 'Williwaw Book', 'Williwaw', 'Playfair Display', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-geist: 'Geist', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Geist', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 
   /* Transitions */
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -103,7 +104,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 6rem;
   position: relative;
   z-index: 1;
 }
@@ -114,6 +115,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  transform: translateY(-1.5rem);
 }
 
 /* Typography Foundation */
@@ -139,6 +141,29 @@ h6 {
   color: var(--text-primary);
   margin: 0 auto;
   max-width: 1000px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-divider {
+  width: 1px;
+  height: 52px;
+  margin: 2.25rem auto;
+  background: linear-gradient(to bottom, rgba(34, 22, 22, 0.4), rgba(34, 22, 22, 0));
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtext {
+  font-family: var(--font-geist);
+  font-size: clamp(0.875rem, 1.3vw, 1.05rem);
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0 auto;
+  max-width: 540px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
   position: relative;
   z-index: 2;
 }
