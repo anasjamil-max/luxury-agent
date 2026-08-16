@@ -229,6 +229,34 @@ h6 {
   }
 }
 
+/* Floating Ball Icon positioning on lower end of 'n' in 'campaign' */
+.word-campaign-n-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.ball-d-icon {
+  position: absolute;
+  width: 0.65em;
+  height: auto;
+  bottom: -0.22em;
+  right: -0.32em;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 16px rgba(219, 112, 147, 0.35));
+  animation: floatBall 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatBall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-4px) rotate(6deg);
+  }
+}
+
 /* Clients Infinite Marquee Section */
 .clients {
   padding: 4rem 2rem 2rem 2rem;
@@ -332,6 +360,12 @@ h6 {
   background: linear-gradient(to bottom, rgba(34, 22, 22, 0.45), rgba(34, 22, 22, 0));
 }
 
+/* Reduced height for final heading divider line */
+#get-started .hero-divider {
+  height: 48px;
+  margin: 1.75rem auto 1rem;
+}
+
 .hero-subtext {
   font-family: var(--font-geist);
   font-size: clamp(0.875rem, 1.3vw, 1.05rem);
@@ -429,10 +463,52 @@ a:hover {
   html {
     font-size: 15px;
   }
+
+  .sn-global-footer {
+    padding: 12px 12px 40px 12px;
+  }
 }
 
 @media (max-width: 480px) {
   html {
     font-size: 14px;
   }
+
+  .sn-global-footer {
+    padding: 10px 12px 30px 12px;
+    gap: 12px;
+  }
+}
+
+/* Site Global Footer */
+.sn-global-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+  padding: 16px 12px 60px 12px;
+  font-size: 11px;
+  letter-spacing: -0.03em;
+  z-index: 2;
+  font-family: var(--font-geist);
+  color: rgba(51, 51, 51, 0.55);
+}
+
+.sn-global-footer a {
+  color: rgba(51, 51, 51, 0.55);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sn-global-footer a:hover {
+  color: var(--text-primary);
+}
+
+.sn-global-footer span {
+  color: rgba(51, 51, 51, 0.55);
 }
