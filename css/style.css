@@ -169,6 +169,60 @@ h6 {
   z-index: 2;
 }
 
+/* Floating Heart Icon positioning on word 'you' */
+.word-you-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.heart-icon {
+  position: absolute;
+  width: 0.65em;
+  height: auto;
+  bottom: -0.25em;
+  right: -0.25em;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 16px rgba(219, 112, 147, 0.35));
+  animation: floatHeart 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-4px) rotate(6deg);
+  }
+}
+
+/* Floating Envelope Icon positioning on lower left of word 'Every' */
+.word-every-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.envelope-icon {
+  position: absolute;
+  width: 0.65em;
+  height: auto;
+  bottom: -0.22em;
+  left: -0.32em;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
+  animation: floatEnvelope 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatEnvelope {
+  0% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  100% {
+    transform: translateY(-4px) rotate(2deg);
+  }
+}
+
 .hero-divider {
   width: 1px;
   height: 52px;
