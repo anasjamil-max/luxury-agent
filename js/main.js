@@ -45,4 +45,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.lenis = lenis;
   }
+
+  // Handle Contact Form Submission
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = submitBtn ? submitBtn.querySelector('.btn-text') : null;
+
+      if (submitBtn) {
+        submitBtn.classList.add('is-success');
+        if (btnText) {
+          btnText.textContent = 'MESSAGE SENT';
+        } else {
+          submitBtn.textContent = 'MESSAGE SENT';
+        }
+      }
+
+      // Wait 3 seconds then refresh the page
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
+    });
+  }
 });

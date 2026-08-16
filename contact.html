@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Luxury Agent - Get in touch with our luxury real estate advisors.">
-  <title>Luxury Agent | Contact</title>
+  <meta name="description" content="Contact Luxury Agent - Let's talk about marketing your properties like the top 1%">
+  <title>Contact Us | Luxury Agent</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,56 +30,67 @@
   <div class="bg-container" aria-hidden="true"></div>
   <div class="bg-overlay" aria-hidden="true"></div>
 
-  <!-- Page Content Structure -->
-  <div class="site-wrapper">
-    <main class="hero-view">
-      <div class="container">
-        <h1 class="hero-title">Market <br>yourself like<br> the top 1%.</h1>
-        <div class="hero-divider" aria-hidden="true"></div>
-        <p class="hero-subtext">Build your brand, win more listings, and stay top of mind.</p>
-        <a href="#social-content" class="btn btn-glass hero-btn">GET STARTED</a>
-        <!-- Infinite Logo Marquee -->
-        <div class="clients">
-          <p class="clients-title">FROM THE TEAM BEHIND STERLING HALBERG. TRUSTED BY <br>FOUNDERS AROUND THE WORLD.</p>
-          <div class="clients-logos-wrapper">
-            <div class="clients-logos-track">
-              <div class="clients-logos-set">
-                <img src="images/client-pf.png" alt="PetFindr">
-                <img src="images/client-s.png" alt="Scrub.">
-                <img src="images/client-bv.png" alt="bluevirtual">
-                <img src="images/client-mk.png" alt="mk">
-                <img src="images/client-tc.png" alt="tush & co.">
-              </div>
-              <div class="clients-logos-set" aria-hidden="true">
-                <img src="images/client-pf.png" alt="PetFindr">
-                <img src="images/client-s.png" alt="Scrub.">
-                <img src="images/client-bv.png" alt="bluevirtual">
-                <img src="images/client-mk.png" alt="mk">
-                <img src="images/client-tc.png" alt="tush & co.">
-              </div>
+  <!-- Site Wrapper -->
+  <div class="site-wrapper contact-wrapper">
+    <!-- Top-Left Back Button -->
+    <a href="index.html" class="contact-back-btn btn btn-glass">
+      &larr; BACK
+    </a>
+
+    <!-- Main Contact Section -->
+    <main class="contact-main">
+      <div class="container contact-container">
+        <h1 class="hero-title contact-title">Let's Talk.</h1>
+        <p class="contact-subtext">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contact-form" action="#" method="POST">
+          <!-- Row 1: Name & Email -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">NAME</label>
+              <input type="text" id="contact-name" name="name" class="glass-input" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">EMAIL</label>
+              <input type="email" id="contact-email" name="email" class="glass-input" required>
             </div>
           </div>
-        </div>
+
+          <!-- Row 2: Agent, Team, or Brokerage -->
+          <div class="form-group">
+            <label for="contact-role">ARE YOU AN AGENT, TEAM, OR BROKERAGE?</label>
+            <input type="text" id="contact-role" name="role" class="glass-input">
+          </div>
+
+          <!-- Row 3: Website (Optional) -->
+          <div class="form-group">
+            <label for="contact-website">WEBSITE (OPTIONAL)</label>
+            <input type="url" id="contact-website" name="website" class="glass-input">
+          </div>
+
+          <!-- Row 4: Message -->
+          <div class="form-group">
+            <label for="contact-message">MESSAGE</label>
+            <textarea id="contact-message" name="message" class="glass-input glass-textarea" rows="4"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-submit-wrapper">
+            <button type="submit" id="submit-btn" class="btn btn-glass form-submit-btn">
+              <span class="btn-text">SEND MESSAGE</span>
+            </button>
+          </div>
+        </form>
       </div>
+
+      <!-- Global Footer -->
+      <footer class="sn-global-footer">
+        <a href="#instagram" target="_blank" rel="noopener">Instagram</a>
+        <a href="#careers">Careers</a>
+        <span>Luxury Agent © 2026</span>
+      </footer>
     </main>
-
-    <!-- Scrollable Section 2 -->
-    <section class="section-view" id="social-content">
-      <div class="container">
-        <h2 class="hero-title">Done-for-<span class="word-you-wrapper">you<img src="images/heart.png" alt="Heart" class="heart-icon"></span><br> social content.<br> <span class="word-every-wrapper"><img src="images/envelope.png" alt="Envelope" class="envelope-icon">Every</span> week.</h2>
-        <div class="hero-divider" aria-hidden="true"></div>
-        <p class="hero-subtext">Posts, carousels, stories, reels, and more—planned and created around your brand and local market.</p>
-      </div>
-    </section>
-
-    <!-- Scrollable Section 3 -->
-    <section class="section-view" id="photo-editing">
-      <div class="container">
-        <h2 class="hero-title">Your real estate photos.<br> Ready in 30 minutes.</h2>
-        <div class="hero-divider" aria-hidden="true"></div>
-        <p class="hero-subtext">Professional retouching, lighting corrections, sky replacements, object removal, and more. All under one subscription.</p>
-      </div>
-    </section>
   </div>
 </body>
 
