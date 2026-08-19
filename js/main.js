@@ -46,27 +46,65 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lenis = lenis;
   }
 
-  // Handle Contact Form Submission
+  // Handle Contact Form Submission via Web3Forms
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = document.getElementById('submit-btn');
       const btnText = submitBtn ? submitBtn.querySelector('.btn-text') : null;
 
       if (submitBtn) {
-        submitBtn.classList.add('is-success');
+        submitBtn.disabled = true;
         if (btnText) {
-          btnText.textContent = 'MESSAGE SENT';
+          btnText.textContent = 'SENDING...';
         } else {
-          submitBtn.textContent = 'MESSAGE SENT';
+          submitBtn.textContent = 'SENDING...';
         }
       }
 
-      // Wait 3 seconds then refresh the page
-      setTimeout(() => {
-        window.location.reload();
-      }, 3000);
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          if (submitBtn) {
+            submitBtn.classList.add('is-success');
+            if (btnText) {
+              btnText.textContent = 'MESSAGE SENT';
+            } else {
+              submitBtn.textContent = 'MESSAGE SENT';
+            }
+          }
+          contactForm.reset();
+        } else {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            if (btnText) {
+              btnText.textContent = 'TRY AGAIN';
+            } else {
+              submitBtn.textContent = 'TRY AGAIN';
+            }
+          }
+          console.error('Submission failed:', result);
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          if (btnText) {
+            btnText.textContent = 'TRY AGAIN';
+          } else {
+            submitBtn.textContent = 'TRY AGAIN';
+          }
+        }
+      }
     });
   }
 });
