@@ -692,3 +692,23 @@ a:hover {
     padding-top: 6rem;
   }
 }
+
+/* Fixed background gradient for mobile view (small screens) */
+@media (max-width: 768px) {
+  body {
+    background: none;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--main-gradient);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
