@@ -272,6 +272,10 @@ h6 {
   margin-right: -50vw;
 }
 
+.mobile-only-br {
+  display: none;
+}
+
 .clients-title {
   font-family: var(--font-mono);
   font-size: 14px;
@@ -360,7 +364,11 @@ h6 {
   background: linear-gradient(to bottom, rgba(34, 22, 22, 0.45), rgba(34, 22, 22, 0));
 }
 
-/* Reduced height for final heading divider line */
+/* Final CTA Section & Divider */
+#get-started {
+  padding-bottom: 7rem;
+}
+
 #get-started .hero-divider {
   height: 48px;
   margin: 1.75rem auto 1rem;
@@ -464,6 +472,36 @@ a:hover {
     font-size: 15px;
   }
 
+  .mobile-only-br {
+    display: inline;
+  }
+
+  .clients-logos-track {
+    animation-duration: 22s;
+  }
+
+  .clients-logos-set {
+    gap: 6rem;
+    padding-right: 6rem;
+  }
+
+  .section-view {
+    min-height: 55vh;
+    min-height: 55dvh;
+    padding: 2.5rem 1.5rem;
+  }
+
+  #get-started {
+    min-height: 75vh;
+    min-height: 75dvh;
+    padding-bottom: 12rem;
+  }
+
+  .section-view .hero-divider {
+    height: 56px;
+    margin: 1.5rem auto;
+  }
+
   .sn-global-footer {
     padding: 12px 12px 40px 12px;
   }
@@ -472,6 +510,27 @@ a:hover {
 @media (max-width: 480px) {
   html {
     font-size: 14px;
+  }
+
+  .clients-logos-track {
+    animation-duration: 18s;
+  }
+
+  .clients-logos-set {
+    gap: 5rem;
+    padding-right: 5rem;
+  }
+
+  .section-view {
+    min-height: 50vh;
+    min-height: 50dvh;
+    padding: 2rem 1.25rem;
+  }
+
+  #get-started {
+    min-height: 70vh;
+    min-height: 70dvh;
+    padding-bottom: 11rem;
   }
 
   .sn-global-footer {
