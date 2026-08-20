@@ -502,6 +502,10 @@ a:hover {
     margin: 1.5rem auto;
   }
 
+  .contact-main {
+    padding-top: 12rem;
+  }
+
   .sn-global-footer {
     padding: 12px 12px 40px 12px;
   }
@@ -748,7 +752,7 @@ a:hover {
   }
 
   .contact-main {
-    padding-top: 6rem;
+    padding-top: 12rem;
   }
 }
 
