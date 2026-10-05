@@ -229,6 +229,34 @@ h6 {
   }
 }
 
+/* Floating Bob Icon positioning on top of 's' in 'leads' */
+.word-leads-s-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.bob-icon {
+  position: absolute;
+  width: 0.85em;
+  height: auto;
+  top: -0.15em;
+  right: -0.75em;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
+  animation: floatBob 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatBob {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-4px) rotate(6deg);
+  }
+}
+
 /* Floating Ball Icon positioning on lower end of 'n' in 'campaign' */
 .word-campaign-n-wrapper {
   position: relative;
